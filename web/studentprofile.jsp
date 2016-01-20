@@ -13,22 +13,14 @@
     %>
 <html>
     <%
+        String[] profile=new String[10];
      try
          {
          Class.forName("com.mysql.jdbc.Driver");
          Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","eminem");
          Statement st=cn.createStatement();
          ResultSet rs=st.executeQuery("SELECT * FROM register WHERE Registration_ID='"+uid+"'");
-         String[] profile=new String[10];
-         int i=1;
-         System.out.println("initialization="+i);
          while(rs.next()){
-             profile[i]=rs.getString(2);
-             System.out.println("loop="+i);
-             System.out.println(rs.getString(i));
-             i++;
-             System.out.println("After increment="+i);
-         }
     %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -71,7 +63,8 @@
                 font-size: 22px;
                 margin-top: 20px;
                 float: left;
-                margin-left: 50px;
+                margin-left: 100px;
+                padding-bottom: 50px;
             }
             
             a{
@@ -132,57 +125,56 @@
         <div class="content">
             <table cellpadding="10">
                 <tr>
-                    <td><b>Registered ID:</b></td>
-                    <td><div><%=profile[1]%></div></td>
+                    <td><b>⚓ - Registered ID :</b></td>
+                    <td><div><%=rs.getString(1)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>First Name:</b></td>
-                    <td><div><%=profile[2]%></div></td>
+                    <td><b>✎ - First Name :</b></td>
+                    <td><div><%=rs.getString(2)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Last Name:</b></td>
-                    <td><div><%=profile[3]%></div></td>
+                    <td><b>✎ - Last Name :</b></td>
+                    <td><div><%=rs.getString(3)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Date Of Birth:</b></td>
-                    <td><div><%=profile[4]%></div></td>
+                    <td><b>🎂 - Date Of Birth :</b></td>
+                    <td><div><%=rs.getString(4)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Gender:</b></td>
-                    <td><div><%=profile[5]%></div></td>
+                    <td><b>👩 - Gender:</b></td>
+                    <td><div><%=rs.getString(5)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Branch:</b></td>
-                    <td><div><%=profile[6]%></div></td>
+                    <td><b>❄ - Branch :</b></td>
+                    <td><div><%=rs.getString(6)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Year Of Study:</b></td>
-                    <td><div><%=profile[7]%></div></td>
+                    <td><b>📅 - Year :</b></td>
+                    <td><div><%=rs.getString(7)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Phone No:</b></td>
-                    <td><div><%=profile[8]%></div></td>
+                    <td><b>☏ - Phone No :</b></td>
+                    <td><div><%=rs.getString(8)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Address:</b></td>
-                    <td><div><%=profile[9]%></div></td>
+                    <td><b>✍ - Address :</b></td>
+                    <td><div><%=rs.getString(9)%></div></td>
                 </tr>
                 <tr>
-                    <td><b>Email ID:</b></td>
-                    <td><div><%=profile[10]%></div></td>
+                    <td><b>✉ - Email ID :</b></td>
+                    <td><div><%=rs.getString(10)%></div></td>
                 </tr> 
             </table>
         </div>
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
     </body>
     <%
-
-    
+        }  
    // rs.close();
     }
      catch(Exception e)
      {
-         //out.prinln("error is"+e);
+         out.println("error is"+e);
          
      }
      
