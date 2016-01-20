@@ -1,18 +1,29 @@
 <%-- 
-    Document   : studentcatlog
-    Created on : 20 Jan, 2016, 12:41:32 AM
+    Document   : subjectpage
+    Created on : 20 Jan, 2016, 7:26:54 PM
     Author     : Emin3M
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <%
-        String uid=request.getParameter("uid");
-    %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Student Column</title>
+        <title>Subject Page</title>
+        
+        <script type="Text/JavaScript">
+        function validation(form){
+            if(document.subject.sid.value===""){
+                document.getElementById('error').innerHTML = "Please Select Exam Paper";
+                subject.sid.focus();
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+        
     <style>
             body{
                 width: 100%;
@@ -47,19 +58,29 @@
             }
             
             .content{
-                text-align: center;
                 font-family: helvetica;
                 font-size: 22px;
                 margin-top: 20px;
             }
             
-            a{
-                text-decoration: none;
-                color: darkblue;
+            #next{
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin-top: 20px;
             }
             
-            span{
-                color: black;
+            table{
+                text-align: center;
+            }
+            
+            #error{
+                color: red;
+                text-align: center;
+                font-size: 18px;
+                padding-top: 20px;
+                padding-bottom: 10px;
             }
             
             .back{
@@ -107,13 +128,24 @@
                     <img id="img" src="logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
-        <div style="font-family: helvetica"><center><h1><u>Student Column</u></h1></</div>
+        <div style="font-family: helvetica"><center><h1><u>Exam Paper</u></h1></</div>
         
         <div class="content">
-            <hr><a href="studentprofile.jsp?uid=<%=uid%>"><h2><span>☢</span> My Profile</h2></a><hr>
-            <a href="home.html"><h2><span>☢</span> Internal Guide</h2></a><hr>
-            <a href="subjectpage.jsp"><h2><span>☢</span> Take Exam</h2></a><hr>
-            <a href="home.html"><h2><span>☢</span> Project Details</h2></a><hr>
+            <form action="subject.jsp" method="POST" name="subject" onsubmit="return  validation(this)">
+                <table border="0" cellspacing="10">
+                        <tr>
+                            <td><b>Exam Paper:</b></td>
+                            <td><select name="sid" style="width:100%;">
+                                    <option value="">Select Paper</option>
+                                    <option value="1">Paper 1</option>
+                                    <option value="2">Paper 2</option>
+                                    <option value="3">Paper 3</option>
+                                </select></td>
+                        </tr>                         
+                </table>
+                <div id="error"></div>
+                <div><input type="submit" value="Next" size="5" id="next"/></div>
+            </form>
         </div>
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
     </body>
