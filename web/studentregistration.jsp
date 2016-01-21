@@ -49,25 +49,16 @@ try
                      </jsp:forward>
                    <%  
                    }
-                   
-                else 
-                    {
-                      
-                    %>
-                    <jsp:forward page="message.jsp">
-                         <jsp:param name="p2" value="Registration Failed"/>
-                    </jsp:forward> 
-                  <%  }
                 //  st.close();
                   //cn.close();
-                  }
+    }
                   catch(Exception e)
                   {
                     String trace = e.toString();
 
                     if(trace.equals("com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '"+regid+"' for key 'PRIMARY'")){
                         %>
-                        <jsp:forward page="error.jsp">
+                        <jsp:forward page="message.jsp">
                             <jsp:param name="p1" value="<%=regid%>"/>
                             <jsp:param name="p2" value="HallTicket No"/>
                         </jsp:forward>

@@ -57,6 +57,11 @@
                 padding-right:150px;
             }
             
+            .back{
+                margin: 10px;
+                float: left;
+            }
+            
             .content{
                 padding:5px;
             }
@@ -90,15 +95,21 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
             </div>
         </div> 
+        
+        <div class="back">
+            <a href="home.html">
+            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+        </div>
+        
         <center>
         <div class="content">
-            <h1><u>Professor Login Page</u></h1>
+            <div style="padding-right:70px"><h1><u>Professor Login Page</u></h1></div>
             
             <form  name="prologinform" method="POST" action="professorlogin.jsp" onsubmit="return regvalidate(this)">
                 <table border="0" cellpadding="10">

@@ -60,7 +60,7 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
@@ -72,8 +72,8 @@
             <div style="padding:20px;"><h2>Please check your Hallticket No and Password</h2> 
                 <h2>If you are a new User, Please Register your Hallticket No</h2> 
             </div>
-            <div style="padding:20px;"><h2>Please click Register Now to go to Registration Page</h2>
-                <a href ="studentregistrationform.jsp"><h4>Register Now</h4></a>
+            <div style="padding:20px;"><h2>Please click the button below to go to Registration Page</h2>
+                <a href ="studentloginform.jsp"><img id="bakimg" src="login.png" alt="Back button" height="65" width="65"></a>
             </div>
         </div>
         </center>

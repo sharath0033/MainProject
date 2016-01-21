@@ -60,20 +60,21 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
             </div>
-        </div> 
+        </div>
+        
         <center>
         <div class="content">
-            <h1><u>Login Failed</u></h1>
+            <div><h1><u>Login Failed</u></h1></div>
             <div style="padding:20px;"><h2>Please check your Username and Password</h2> 
                 <h2>The credentials are not valid</h2> 
             </div>
-            <div style="padding:20px;"><h2>Please click Back to return to Login Page</h2>
-                <a href ="professorloginform.jsp"><h4><<==Back</h4></a>
+            <div style="padding:20px;"><h2>Please click the button below to return to Login Page and try again</h2>
+                <a href ="professorloginform.jsp"><img id="bakimg" src="login.png" alt="Back button" height="65" width="65"></h4></a>
             </div>
         </div>
         </center>

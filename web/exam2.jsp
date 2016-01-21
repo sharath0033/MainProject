@@ -84,24 +84,24 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
             </div>
         </div> 
         <div class="back">
-                    <a href="studentloginform.jsp">
-                    <img id="img" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+                    <a href="subjectpage.jsp">
+                    <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <div class="logout">
                     <a href="home.html">
-                    <img id="img" src="logout.png" alt="Logout button" height="55" width="55"></a>
+                    <img id="logoutimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <center>
-        <div><h1><u>Exam Paper-II</u></h1></</div>
+        <div><h1><u>Exam Paper-II</u></h1></div>
         
         <div class="content">
             <form action="examcode2.jsp" method="POST" name="exam1">

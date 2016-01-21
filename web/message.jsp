@@ -9,21 +9,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Redirection Page</title>
     <style>
             body{
                 width: 100%;
                 margin: auto;
+                font-family: helvetica;
                 background: #eeeeee;
-            }
-        
-            .container{
-                width: 100%;
-                margin: 0 auto;
             }
             
             .header{
                 background-color: black;
                 width: 100%;
+                margin: 0 auto;
                 top: 0;
             }
             
@@ -35,18 +33,19 @@
             
             .title{
                 color:white;
-                font-family: helvetica;
                 font-size:140%;
                 text-align:center;
                 padding:10px;
                 padding-right:150px;
             }
             
+            .back{
+                margin: 10px;
+                float: left;
+            }
+            
             .content{
-                color:black;
-                font-family: helvetica;
-                margin: 20px;
-                padding: 10px;
+                padding:5px;
             }
             
             a{
@@ -57,7 +56,7 @@
             
             .copyright{
                 background-color:black;
-                font-family: helvetica;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;
@@ -69,31 +68,36 @@
     </head>
     <body>
         <div class="header">
-            <div class="container">
-                <div class="home">
-                    <a href="home.html">
-                    <img id="img" src="logo.png" alt="Home page" ></a>
-                </div>
-	
-                <div class="title">
+            <div class="home">
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+            </div>
+            <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
-                </div>
             </div>
         </div> 
         
+        <div class="back">
+            <a href="studentregistrationform.jsp">
+            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+        </div>
+        
+        <center>
         <div class="content">
             <%
-            String s1= session.getAttribute("userId").toString();
-            String s2=request.getParameter("p2");
+                String s1=request.getParameter("p1");
+                String s2=request.getParameter("p2");
             %>
-                <center>
-                    <h1 style="color:brown"><%=s1%> <%=s2%></h1>
-                    <div style="padding:20px;"><h2>To see your Results please click Result Button</h2> 
-                    <a href="resultgrades.jsp">Result ==>></a></div>
-                    <div style="padding:20px;"><h2>To return to Home Page please click Back Button</h2>
-                    <a href ="home.html"><<== Back</a></div>
-                </center>
+            <div style="padding-right:70px"><h1><u>Registration Unsuccessful</u></h1></div>
+            <div style="padding:20px;"><h2>
+                    <span style="color:brown">
+                        <%=s1%>
+                    </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%></h2> 
+            </div>
+            <div style="padding:20px;"><h2>If you have already Registered, Please return to Login Page by clicking below button</h2>
+            <a href ="studentloginform.jsp"><img id="loginimg" src="login.png" alt="Login Button" height="65" width="65"></a></div>
+                
         </div>
+        </center>
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
     </body>
 </html>

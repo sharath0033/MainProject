@@ -14,17 +14,14 @@
             body{
                 width: 100%;
                 margin: auto;
-                color: #eeeeee;
-            }
-        
-            .container{
-                width: 100%;
-                margin: 0 auto;
+                font-family: helvetica;
+                background: #eeeeee;
             }
             
             .header{
                 background-color: black;
                 width: 100%;
+                margin: 0 auto;
                 top: 0;
             }
             
@@ -36,18 +33,19 @@
             
             .title{
                 color:white;
-                font-family: helvetica;
                 font-size:140%;
                 text-align:center;
                 padding:10px;
                 padding-right:150px;
             }
             
+            .logout{
+                margin: 10px;
+                float: right;
+            }
+            
             .content{
-                color:black;
-                font-family: helvetica;
-                margin: 20px;
-                padding: 10px;
+                padding:5px;
             }
             
             a{
@@ -58,7 +56,7 @@
             
             .copyright{
                 background-color:black;
-                font-family: helvetica;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;
@@ -70,31 +68,43 @@
     </head>
     <body>
         <div class="header">
-            <div class="container">
-                <div class="home">
-                    <a href="home.html">
-                    <img id="img" src="logo.png" alt="Home page" ></a>
-                </div>
-	
-                <div class="title">
+            <div class="home">
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+            </div>
+            <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
-                </div>
             </div>
         </div> 
         
+        <div class="logout">
+                    <a href="home.html">
+                    <img id="logoutimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
+        </div>
+        
+        <center>
         <div class="content">
             <%
                 String s1 = session.getAttribute("userId").toString();
                 String s2=request.getParameter("p2");
             %>
-                <center>
-                    <h1 style="color:brown"><%=s1%> <%=s2%></h1>
-                    <div style="padding:30px;"><h2>Please click Next to continue to Exam Page</h2> 
-                    <a href="subjectpage.jsp">Next ==>></a></div>
-                    <div style="padding:30px;"><h2>Click Catalog button to go to Student Column Page</h2>
-                    <a href ="catalogstudent.jsp">Catalog</a></div>
-                </center>
+            <div style="padding-left:70px"><h1><u>Registration Successful</u></h1></div>
+            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
+            <div style="padding:15px;">
+                <h2>Please click the button below to continue to Exam Page</h2> 
+                <a href="subjectpage.jsp">
+                    <img id="nextimg" src="next.png" alt="Next Button" height="65" width="65">
+                </a>
+            </div>
+            <div style="padding:15px;">
+                <h2>Click the button below to go to Student Column Page</h2>
+                <a href ="catalogstudent.jsp">
+                    <img id="catlogimg" src="catalog.png" alt="Catalog button" height="65" width="65">
+                </a>
+            </div>
         </div>
+        </center>
+    
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
+        
     </body>
 </html>

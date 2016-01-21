@@ -53,11 +53,6 @@
                 color: black;
             }
             
-            .back{
-                margin: 10px;
-                float: left;
-            }
-            
             .logout{
                 margin: 10px;
                 float: right;
@@ -76,25 +71,20 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
             </div>
         </div> 
         
-        <div class="back">
-            <a href="studentloginform.jsp">
-            <img id="img" src="backbutton.png" alt="Back button" height="55" width="55"></a>
-        </div>
-        
         <div class="logout">
             <a href="home.html">
-            <img id="img" src="logout.png" alt="Logout button" height="55" width="55"></a>
+            <img id="logoutimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
        
         <center> 
-        <div style="font-family: helvetica"><center><h1><u>Professor Column</u></h1></</div>
+        <div style="padding-left:70px"><h1><u>Professor Column</u></h1></div>
         
         <div class="content">
             <hr><a href="home.html"><h2><span>☢</span> My Profile</h2></a><hr>

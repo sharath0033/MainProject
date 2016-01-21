@@ -39,6 +39,11 @@
                 padding-right:150px;
             }
             
+            .back{
+                margin: 10px;
+                float: left;
+            }
+            
             .content{
                 padding:5px;
             }
@@ -64,12 +69,17 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
             </div>
         </div> 
+        
+        <div class="back">
+            <a href="studentregistrationform.jsp">
+            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+        </div>
         
         <center>
         <div class="content">
@@ -77,14 +87,14 @@
                 String s1=request.getParameter("p1");
                 String s2=request.getParameter("p2");
             %>
-            <h1><u>Registration Unsuccessful</u></h1>
+            <div style="padding-right:70px"><h1><u>Registration Unsuccessful</u></h1></div>
             <div style="padding:20px;"><h2>
                     <span style="color:brown">
                         <%=s1%>
                     </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%></h2> 
             </div>
-            <div style="padding:20px;"><h2>If you have already Registered, Please return to Login Page by clicking below button</h2>
-            <a href ="home.html">Home</a></div>
+            <div style="padding:20px;"><h2>Please return to Registration Page and try again. Please click the button below to go to Registration Page.</h2>
+            <a href ="studentregistrationform.jsp"><img id="bakimg" src="register.png" alt="Back button" height="65" width="65"></a></div>
                 
         </div>
         </center>

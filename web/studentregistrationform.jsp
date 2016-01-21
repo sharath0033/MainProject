@@ -107,6 +107,11 @@
                 padding-right:150px;
             }
             
+            .back{
+                margin: 10px;
+                float: left;
+            }
+            
             .left{
                 float: right;
             }
@@ -148,17 +153,22 @@
 
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
             </div>
-        </div> 
+        </div>
+        
+        <div class="back">
+            <a href="studentloginform.jsp">
+            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+        </div>
         
         <div class="content">
     
             <center>
-            <h1><u>Student Registration Form</u></h1>
+            <div style="padding-right:70px"><h1><u>Student Registration Form</u></h1></div>
             <h3><marquee><i>Fill in the Details to Register</i></marquee></h3>
             <form method=post name="stdregform" action="studentregistration.jsp" onsubmit="return validation(this)">
                 <table border="0" cellpadding="10">

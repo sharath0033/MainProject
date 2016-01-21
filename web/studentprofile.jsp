@@ -81,7 +81,7 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
@@ -89,20 +89,19 @@
         </div> 
         
         <div class="back">
-                    <a href="catlogstudent.jsp">
-                    <img id="img" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+            <a href="catalogstudent.jsp">
+            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <div class="logout">
                     <a href="home.html">
-                    <img id="img" src="logout.png" alt="Logout button" height="55" width="55"></a>
+                    <img id="logimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         
         <center> 
+        <div><h1><u>My Profile</u></h1></div>
         <div class="content">
-            <div><h1><u>My Profile</u></h1></</div>
-            
             <table border="0" cellpadding="10">
                 <tr>
                     <td><b>⚓ - Registered ID :</b></td>
