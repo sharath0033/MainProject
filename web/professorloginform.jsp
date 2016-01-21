@@ -10,7 +10,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Professor Login</title>
-        
         <script type="Text/JavaScript">
         function regvalidate(form){
             if(document.prologinform.txt1.value===""){
@@ -33,17 +32,14 @@
             body{
                 width: 100%;
                 margin: auto;
+                font-family: helvetica;
                 background: #eeeeee;
-            }
-        
-            .container{
-                width: 100%;
-                margin: 0 auto;
             }
             
             .header{
                 background-color: black;
                 width: 100%;
+                margin: 0 auto;
                 top: 0;
             }
             
@@ -55,7 +51,6 @@
             
             .title{
                 color:white;
-                font-family: helvetica;
                 font-size:140%;
                 text-align:center;
                 padding:10px;
@@ -63,7 +58,6 @@
             }
             
             .content{
-                font-family: helvetica;
                 padding:5px;
             }
             
@@ -72,7 +66,6 @@
                 padding-right: 20px;
                 padding-top: 5px;
                 padding-bottom: 5px;
-                margin-top: 20px;
             }
             
             #error{
@@ -84,7 +77,7 @@
                         
             .copyright{
                 background-color:black;
-                font-family: helvetica;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;
@@ -96,43 +89,38 @@
     </head>
     <body>
         <div class="header">
-            <div class="container">
-            
-                <div class="home">
-                    <a href="home.html">
-                    <img id="img" src="logo.png" alt="Home page" ></a>
-                </div>
-	
-                <div class="title">
+            <div class="home">
+                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+            </div>
+            <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
-                </div>
-
             </div>
         </div> 
-        
+        <center>
         <div class="content">
-            <center>
             <h1><u>Professor Login Page</u></h1>
-        <form  name="prologinform" method="POST" action="professorlogin.jsp" onsubmit="return regvalidate(this)">
-            <table border="0" cellpadding="10">
-                <tr>
-                    <td style="float:right"><b>Username :</b></td>
-                    <td><input type=text name="txt1" style="width:100%"></td> 
-                </tr>
-              
-                
-                <tr>
-                    <td style="float:right"><b>Password :</b></td>
-                    <td><input type=password name="txt2" style="width:100%"></td>
-                </tr>
-            </table>
-            <div id="error"></div>
-            <input type="submit" value="Login" id="login">
             
-        </form>
-            </center>
+            <form  name="prologinform" method="POST" action="professorlogin.jsp" onsubmit="return regvalidate(this)">
+                <table border="0" cellpadding="10">
+                    <tr>
+                        <td style="float:right"><b>Username :</b></td>
+                        <td><input type=text name="txt1" style="width:100%"></td> 
+                    </tr>
+                    <tr>
+                        <td style="float:right"><b>Password :</b></td>
+                        <td><input type=password name="txt2" style="width:100%"></td>
+                    </tr>
+                </table>
+            
+                <div id="error"></div>
+            
+                <input type="submit" value="Login" id="login">
+            </form>
+            
         </div>
+        </center>
         
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
+        
     </body>
 </html>

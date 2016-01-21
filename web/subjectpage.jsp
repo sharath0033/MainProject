@@ -28,17 +28,14 @@
             body{
                 width: 100%;
                 margin: auto;
+                font-family: helvetica;
                 background: #eeeeee;
-            }
-        
-            .container{
-                width: 100%;
-                margin: 0 auto;
             }
             
             .header{
                 background-color: black;
                 width: 100%;
+                margin: 0 auto;
                 top: 0;
             }
             
@@ -50,7 +47,6 @@
             
             .title{
                 color:white;
-                font-family: helvetica;
                 font-size:140%;
                 text-align:center;
                 padding:10px;
@@ -58,9 +54,7 @@
             }
             
             .content{
-                font-family: helvetica;
-                font-size: 22px;
-                margin-top: 20px;
+                padding:5px;
             }
             
             #next{
@@ -68,7 +62,6 @@
                 padding-right: 20px;
                 padding-top: 5px;
                 padding-bottom: 5px;
-                margin-top: 20px;
             }
             
             table{
@@ -77,10 +70,8 @@
             
             #error{
                 color: red;
-                text-align: center;
-                font-size: 18px;
                 padding-top: 20px;
-                padding-bottom: 10px;
+                padding-bottom: 20px;
             }
             
             .back{
@@ -95,7 +86,7 @@
             
             .copyright{
                 background-color:black;
-                font-family: helvetica;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;
@@ -107,17 +98,14 @@
     </head>
     <body>
         <div class="header">
-            <div class="container">
-                <div class="home">
-                    <a href="home.html">
-                    <img id="img" src="logo.png" alt="Home page" ></a>
-                </div>
-	
-                <div class="title">
+            <div class="home">
+                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+            </div>
+            <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
-                </div>
             </div>
         </div> 
+        
         <div class="back">
                     <a href="studentloginform.jsp">
                     <img id="img" src="backbutton.png" alt="Back button" height="55" width="55"></a>
@@ -128,13 +116,15 @@
                     <img id="img" src="logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
-        <div style="font-family: helvetica"><center><h1><u>Exam Paper</u></h1></</div>
         
+        <center>
         <div class="content">
+            <div><h1><u>Exam Paper</u></h1></div>
+            
             <form action="subject.jsp" method="POST" name="subject" onsubmit="return  validation(this)">
                 <table border="0" cellspacing="10">
                         <tr>
-                            <td><b>Exam Paper:</b></td>
+                            <td><span style="font-weight:bold;">Exam Paper :</span></td>
                             <td><select name="sid" style="width:100%;">
                                     <option value="">Select Paper</option>
                                     <option value="1">Paper 1</option>
@@ -147,6 +137,9 @@
                 <div><input type="submit" value="Next" size="5" id="next"/></div>
             </form>
         </div>
+        </center>
+        
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
+    
     </body>
 </html>

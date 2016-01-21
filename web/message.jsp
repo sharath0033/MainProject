@@ -9,7 +9,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
     <style>
             body{
                 width: 100%;
@@ -84,14 +83,14 @@
         
         <div class="content">
             <%
-            String s1=request.getParameter("p1");
+            String s1= session.getAttribute("userId").toString();
             String s2=request.getParameter("p2");
             %>
                 <center>
                     <h1 style="color:brown"><%=s1%> <%=s2%></h1>
-                    <div style="padding:30px;"><h2>To see your Results please click Result</h2> 
+                    <div style="padding:20px;"><h2>To see your Results please click Result Button</h2> 
                     <a href="resultgrades.jsp">Result ==>></a></div>
-                    <div style="padding:30px;"><h2>To return to Home Page please click Back</h2>
+                    <div style="padding:20px;"><h2>To return to Home Page please click Back Button</h2>
                     <a href ="home.html"><<== Back</a></div>
                 </center>
         </div>

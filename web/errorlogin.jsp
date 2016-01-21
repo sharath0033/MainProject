@@ -14,17 +14,14 @@
             body{
                 width: 100%;
                 margin: auto;
+                font-family: helvetica;
                 background: #eeeeee;
-            }
-        
-            .container{
-                width: 100%;
-                margin: 0 auto;
             }
             
             .header{
                 background-color: black;
                 width: 100%;
+                margin: 0 auto;
                 top: 0;
             }
             
@@ -36,18 +33,10 @@
             
             .title{
                 color:white;
-                font-family: helvetica;
                 font-size:140%;
                 text-align:center;
                 padding:10px;
                 padding-right:150px;
-            }
-            
-            .content{
-                color:black;
-                font-family: helvetica;
-                margin: 20px;
-                padding: 10px;
             }
             
             a{
@@ -58,40 +47,38 @@
             
             .copyright{
                 background-color:black;
-                font-family: helvetica;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;
                 padding: 10px;
                 bottom: 0;
-                position: fixed;
+                position:fixed;
             }
     </style>
     </head>
     <body>
         <div class="header">
-            <div class="container">
-                <div class="home">
-                    <a href="home.html">
-                    <img id="img" src="logo.png" alt="Home page" ></a>
-                </div>
-	
-                <div class="title">
+            <div class="home">
+                <a href="home.html"><img id="img" src="logo.png" alt="Home page" ></a>
+            </div>
+            <div class="title">
                 <h1>STUDENT  PROJECT  ALLOCATION</h1>
-                </div>
             </div>
         </div> 
-        
+        <center>
         <div class="content">
-                <center>
-                    <h1><u>Login Failed</u></h1>
-                    <div style="padding:30px;"><h2>Please check your Hallticket No and Password</h2> 
-                        <h2>If you are a new User, Please register your Hallticket No in Login Page</h2> 
-                    </div>
-                    <div style="padding:30px;"><h2>Please click Register Now to go to Registration Page</h2>
-                        <a href ="studentregistrationform.jsp"><h4>Register Now</h4></a></div>
-                </center>
+            <h1><u>Login Failed</u></h1>
+            <div style="padding:20px;"><h2>Please check your Hallticket No and Password</h2> 
+                <h2>If you are a new User, Please Register your Hallticket No</h2> 
+            </div>
+            <div style="padding:20px;"><h2>Please click Register Now to go to Registration Page</h2>
+                <a href ="studentregistrationform.jsp"><h4>Register Now</h4></a>
+            </div>
         </div>
+        </center>
+        
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
+        
     </body>
 </html>

@@ -84,15 +84,15 @@
         
         <div class="content">
             <%
-                String s1=request.getParameter("p1");
+                String s1 = session.getAttribute("userId").toString();
                 String s2=request.getParameter("p2");
             %>
                 <center>
                     <h1 style="color:brown"><%=s1%> <%=s2%></h1>
                     <div style="padding:30px;"><h2>Please click Next to continue to Exam Page</h2> 
-                    <a href="subject.jsp">Next ==>></a></div>
-                    <div style="padding:30px;"><h2>To return to Home Page please click Back</h2>
-                    <a href ="home.html"><<== Back</a></div>
+                    <a href="subjectpage.jsp">Next ==>></a></div>
+                    <div style="padding:30px;"><h2>Click Catalog button to go to Student Column Page</h2>
+                    <a href ="catalogstudent.jsp">Catalog</a></div>
                 </center>
         </div>
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>

@@ -40,11 +40,11 @@ try
     
                // out.println("connection established");
                 String qry="INSERT INTO project.register VALUES ('"+regid+"','"+regfname+"','"+reglname+"','"+date+"','"+gen+"','"+bran+"','"+ear+"','"+phno+"','"+addr+"','"+email+"','"+pword+"')";
+                session.setAttribute("userId",regid);
                 if(st.executeUpdate(qry)>0)
                     { 
                      %>
                      <jsp:forward page="message1.jsp">
-                         <jsp:param name="p1" value="<%=regid%>"/>
                          <jsp:param name="p2" value="Successfully Registered"/>
                      </jsp:forward>
                    <%  
@@ -55,7 +55,6 @@ try
                       
                     %>
                     <jsp:forward page="message.jsp">
-                        <jsp:param name="p1" value="<%=regid%>"/>
                          <jsp:param name="p2" value="Registration Failed"/>
                     </jsp:forward> 
                   <%  }
@@ -69,8 +68,8 @@ try
                     if(trace.equals("com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '"+regid+"' for key 'PRIMARY'")){
                         %>
                         <jsp:forward page="error.jsp">
-                        <jsp:param name="p1" value="<%=regid%>"/>
-                        <jsp:param name="p2" value="HallTicket No"/>
+                            <jsp:param name="p1" value="<%=regid%>"/>
+                            <jsp:param name="p2" value="HallTicket No"/>
                         </jsp:forward>
                         <%
                     }
@@ -78,8 +77,8 @@ try
                     if(trace.equals("com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '"+phno+"' for key 'Mobile_No_UNIQUE'")){
                        %>
                         <jsp:forward page="error.jsp">
-                        <jsp:param name="p1" value="<%=phno%>"/>
-                        <jsp:param name="p2" value="Mobile No"/>
+                            <jsp:param name="p1" value="<%=phno%>"/>
+                            <jsp:param name="p2" value="Mobile No"/>
                         </jsp:forward>
                         <%
                     }
@@ -87,8 +86,8 @@ try
                     if(trace.equals("com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '"+email+"' for key 'Email_ID_UNIQUE'")){
                         %>
                         <jsp:forward page="error.jsp">
-                        <jsp:param name="p1" value="<%=email%>"/>
-                        <jsp:param name="p2" value="Email ID"/>
+                            <jsp:param name="p1" value="<%=email%>"/>
+                            <jsp:param name="p2" value="Email ID"/>
                         </jsp:forward>
                         <%
                     }
