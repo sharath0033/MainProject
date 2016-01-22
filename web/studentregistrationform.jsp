@@ -83,6 +83,7 @@
                 width: 100%;
                 margin: auto;
                 font-family: helvetica;
+                color:black;
                 background: #eeeeee;
             }
             
@@ -90,21 +91,24 @@
                 background-color: black;
                 width: 100%;
                 margin: 0 auto;
+                height:130px;
                 top: 0;
             }
             
             .home{
                 float: left;
                 padding:10px;
-                padding-left: 60px;
+                padding-left: 80px;
             }
             
             .title{
                 color:white;
-                font-size:140%;
                 text-align:center;
-                padding:10px;
-                padding-right:150px;
+                padding:20px;
+            }
+            
+            .update{
+                border-bottom: 3px solid white;
             }
             
             .back{
@@ -156,7 +160,7 @@
                 <a href="home.html"><img src="logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
-                <h1>STUDENT  PROJECT  ALLOCATION</h1>
+                <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
         </div>
         
