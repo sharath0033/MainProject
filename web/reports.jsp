@@ -1,6 +1,6 @@
 <%-- 
-    Document   : catalogprofessor
-    Created on : 20 Jan, 2016, 1:27:47 AM
+    Document   : reports
+    Created on : 22 Jan, 2016, 6:10:19 PM
     Author     : Emin3M
 --%>
 
@@ -9,8 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Professor Column</title>
-        <style>
+        <title>Reports Column</title>
+    <style>
             body{
                 width: 100%;
                 margin: auto;
@@ -92,9 +92,10 @@
         <div style="padding-left:70px"><h1><u>Professor Column</u></h1></div>
         
         <div class="content">
-            <hr><a href="home.html"><h2><span class="icons">📝</span> Internal Guide Registration</h2></a><hr>
-            <a href="home.html"><h2><span class="icons">🛠</span> Project Allocation</h2></a><hr>
-            <a href="reports.jsp"><h2><span class="icons">📚</span> Reports Column</h2></a><hr>
+            <hr><a href="home.html"><h2><span class="icons">💼</span> Internal Guide Registration Report</h2></a><hr>
+            <a href="home.html"><h2><span class="icons">👔</span> Student Registration Report</h2></a><hr>
+            <a href="home.html"><h2><span class="icons">📝</span> Exam Results Report</h2></a><hr>
+            <a href="home.html"><h2><span class="icons">💻</span> Project Report</h2></a><hr>
         </div>
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
         
