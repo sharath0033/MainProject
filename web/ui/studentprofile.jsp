@@ -85,7 +85,7 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
@@ -93,13 +93,13 @@
         </div> 
         
         <div class="back">
-            <a href="catalogstudent.jsp">
-            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+            <a href="../ui/catalogstudent.jsp">
+            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <div class="logout">
-                    <a href="home.html">
-                    <img id="logimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
+                    <a href="../home.html">
+                    <img id="logimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         
@@ -108,7 +108,7 @@
         <div class="content">
             <table border="0" cellpadding="10">
                 <tr>
-                    <td><b>⚓ - Registered ID :</b></td>
+                    <td><b>🎓 - Registered ID :</b></td>
                     <td><%=rs.getString(1)%></td>
                 </tr>
                 <tr>

@@ -88,27 +88,27 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
         </div> 
         <div class="back">
-                    <a href="subjectpage.jsp">
-                    <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+                    <a href="../ui/subjectpage.jsp">
+                    <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <div class="logout">
-                    <a href="home.html">
-                    <img id="logoutimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
+                    <a href="../home.html">
+                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <center>
         <div><h1><u>Exam Paper-II</u></h1></div>
         
         <div class="content">
-            <form action="examcode2.jsp" method="POST" name="exam1">
+            <form action="../logic/exam2code.jsp" method="POST" name="exam2">
                 <%
                     String uid = session.getAttribute("userId").toString();
                     String sid=request.getParameter("subid");

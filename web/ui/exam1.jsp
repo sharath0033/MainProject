@@ -1,6 +1,6 @@
 <%-- 
-    Document   : exam3
-    Created on : 20 Jan, 2016, 8:18:46 PM
+    Document   : exam1
+    Created on : 20 Jan, 2016, 8:18:26 PM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Exam Paper-III</title>
+        <title>Exam Paper-I</title>
     <style>
             body{
                 width: 100%;
@@ -88,27 +88,27 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
         </div> 
         <div class="back">
-                    <a href="subjectpage.jsp">
-                    <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+                    <a href="../ui/subjectpage.jsp">
+                    <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <div class="logout">
-                    <a href="home.html">
-                    <img id="logoutimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
+                    <a href="../home.html">
+                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <center>
-        <div><h1><u>Exam Paper-III</u></h1></div>
+        <div><h1><u>Exam Paper-I</u></h1></div>
         
         <div class="content">
-            <form action="examcode3.jsp" method="POST" name="exam1">
+            <form action="../logic/exam1code.jsp" method="POST" name="exam1">
                 <%
                     String uid = session.getAttribute("userId").toString();
                     String sid=request.getParameter("subid");

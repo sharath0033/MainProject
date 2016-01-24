@@ -22,13 +22,13 @@
                 out.println("Connection established"); 
                 session.setAttribute("userId",uid);
                 %>
-                    <jsp:forward page="catalogstudent.jsp"/>
+                    <jsp:forward page="../ui/catalogstudent.jsp"/>
                 <%                        
             }
         else
             {
                 %>                                 
-                    <jsp:forward page="errorlogin.jsp"/>
+                    <jsp:forward page="../ui/errorlogin.jsp"/>
                 <%
             }
         }

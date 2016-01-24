@@ -157,24 +157,24 @@
 
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
-                <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
-            </div>
+                <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span cass="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
+            </div>l
         </div>
         
         <div class="back">
-            <a href="studentloginform.jsp">
-            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+            <a href="../ui/studentloginform.jsp">
+            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <div class="content">
     
             <center>
-            <div style="padding-right:70px"><h1><u>Student Registration Form</u></h1></div>
+            <div style="padding-right:40px"><h1><u>Student Registration Form</u></h1></div>
             <h3><marquee><i>Fill in the Details to Register</i></marquee></h3>
-            <form method=post name="stdregform" action="studentregistration.jsp" onsubmit="return validation(this)">
+            <form method=post name="stdregform" action="../logic/studentregistration.jsp" onsubmit="return validation(this)">
                 <table border="0" cellpadding="10">
                     <tr>
                         <td class="left"><b>HallTicket No :</b></td>

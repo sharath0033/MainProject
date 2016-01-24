@@ -1,6 +1,6 @@
 <%-- 
-    Document   : professorloginform
-    Created on : 18 Jan, 2016, 3:02:11 PM
+    Document   : subjectpage
+    Created on : 20 Jan, 2016, 7:26:54 PM
     Author     : Emin3M
 --%>
 
@@ -9,17 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Professor Login</title>
+        <title>Subject Page</title>
+        
         <script type="Text/JavaScript">
-        function regvalidate(form){
-            if(document.prologinform.txt1.value===""){
-                document.getElementById('error').innerHTML = "Please enter your Username";
-                prologinform.txt1.focus();
-                return false;
-            }
-            if(document.prologinform.txt2.value===""){
-                document.getElementById('error').innerHTML = "Please enter your Password";
-                prologinform.txt2.focus();
+        function validation(form){
+            if(document.subject.sid.value===""){
+                document.getElementById('error').innerHTML = "Please Select Exam Paper";
+                subject.sid.focus();
                 return false;
             }
             else{
@@ -27,7 +23,7 @@
             }
         }
     </script>
-    
+        
     <style>
             body{
                 width: 100%;
@@ -70,20 +66,28 @@
                 padding:5px;
             }
             
-            #login{
+            #next{
                 padding-left: 20px;
                 padding-right: 20px;
                 padding-top: 5px;
                 padding-bottom: 5px;
             }
             
+            table{
+                text-align: center;
+            }
+            
             #error{
                 color: red;
-                text-align: center;
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
-                        
+            
+            .logout{
+                margin: 10px;
+                float: right;
+            }
+            
             .copyright{
                 background-color:black;
                 margin-top:20px;
@@ -99,7 +103,7 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
@@ -107,35 +111,39 @@
         </div> 
         
         <div class="back">
-            <a href="home.html">
-            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+                    <a href="../ui/catalogstudent.jsp">
+                    <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
+        
+        <div class="logout">
+                    <a href="../home.html">
+                    <img id="logimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
+        </div>
+        
         
         <center>
         <div class="content">
-            <div style="padding-right:60px"><h1><u>Professor Login Page</u></h1></div>
+            <div><h1><u>Exam Paper</u></h1></div>
             
-            <form  name="prologinform" method="POST" action="professorlogin.jsp" onsubmit="return regvalidate(this)">
-                <table border="0" cellpadding="10">
-                    <tr>
-                        <td style="float:right"><b>Username :</b></td>
-                        <td><input type=text name="txt1" style="width:100%"></td> 
-                    </tr>
-                    <tr>
-                        <td style="float:right"><b>Password :</b></td>
-                        <td><input type=password name="txt2" style="width:100%"></td>
-                    </tr>
+            <form action="../logic/subject.jsp" method="POST" name="subject" onsubmit="return  validation(this)">
+                <table border="0" cellspacing="10">
+                        <tr>
+                            <td><span style="font-weight:bold;">Exam Paper :</span></td>
+                            <td><select name="sid" style="width:100%;">
+                                    <option value="">Select Paper</option>
+                                    <option value="1">Paper 1</option>
+                                    <option value="2">Paper 2</option>
+                                    <option value="3">Paper 3</option>
+                                </select></td>
+                        </tr>                         
                 </table>
-            
                 <div id="error"></div>
-            
-                <input type="submit" value="Login" id="login">
+                <div><input type="submit" value="Next" size="5" id="next"/></div>
             </form>
-            
         </div>
         </center>
         
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
-        
+    
     </body>
 </html>

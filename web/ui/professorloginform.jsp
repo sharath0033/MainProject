@@ -1,6 +1,6 @@
 <%-- 
-    Document   : studentloginform
-    Created on : 18 Jan, 2016, 2:58:33 PM
+    Document   : professorloginform
+    Created on : 18 Jan, 2016, 3:02:11 PM
     Author     : Emin3M
 --%>
 
@@ -9,17 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Student Login</title>
+        <title>Professor Login</title>
         <script type="Text/JavaScript">
         function regvalidate(form){
-            if(document.stloginform.txt1.value===""){
-                document.getElementById('error').innerHTML = "Please enter your HallTicket No";
-                stloginform.txt1.focus();
+            if(document.prologinform.txt1.value===""){
+                document.getElementById('error').innerHTML = "Please enter your Username";
+                prologinform.txt1.focus();
                 return false;
             }
-            if(document.stloginform.txt2.value===""){
+            if(document.prologinform.txt2.value===""){
                 document.getElementById('error').innerHTML = "Please enter your Password";
-                stloginform.txt2.focus();
+                prologinform.txt2.focus();
                 return false;
             }
             else{
@@ -27,7 +27,7 @@
             }
         }
     </script>
-
+    
     <style>
             body{
                 width: 100%;
@@ -77,13 +77,9 @@
                 padding-bottom: 5px;
             }
             
-            a{
-                color: red;
-                text-decoration: none;
-            }
-            
             #error{
                 color: red;
+                text-align: center;
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
@@ -103,7 +99,7 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
@@ -111,18 +107,18 @@
         </div> 
         
         <div class="back">
-            <a href="home.html">
-            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+            <a href="../home.html">
+            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <center>
         <div class="content">
-            <div style="padding-right:60px"><h1><u style="color:black">Student Login Page</u></h1></div>
+            <div style="padding-right:60px"><h1><u>Professor Login Page</u></h1></div>
             
-            <form name="stloginform" method="POST" action="studentlogin.jsp"  onsubmit="return regvalidate(this)">
+            <form  name="prologinform" method="POST" action="../logic/professorlogin.jsp" onsubmit="return regvalidate(this)">
                 <table border="0" cellpadding="10">
                     <tr>
-                        <td style="float:right"><b>HallTicket No :</b></td>
+                        <td style="float:right"><b>Username :</b></td>
                         <td><input type=text name="txt1" style="width:100%"></td> 
                     </tr>
                     <tr>
@@ -130,17 +126,15 @@
                         <td><input type=password name="txt2" style="width:100%"></td>
                     </tr>
                 </table>
-                
-                <div id="error"></div>
-                
-                <input type="submit" value="Login" id="login">
             
-                <a href="studentregistrationform.jsp"><h2 style="margin-top: 100px;">Register Now</h2></a>
+                <div id="error"></div>
+            
+                <input type="submit" value="Login" id="login">
             </form>
             
         </div>
         </center>
-   
+        
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
         
     </body>

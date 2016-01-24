@@ -1,6 +1,6 @@
 <%-- 
-    Document   : studentcatlog
-    Created on : 20 Jan, 2016, 12:41:32 AM
+    Document   : errorlogin
+    Created on : 20 Jan, 2016, 12:54:34 AM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Student Column</title>
+        <title>Login Error</title>
     <style>
             body{
                 width: 100%;
@@ -43,61 +43,57 @@
                 border-bottom: 3px solid white;
             }
             
-            .content{
-                font-size: 22px;
-                padding:5px;
+            .back{
+                margin: 10px;
+                float: left;
             }
             
             a{
                 text-decoration: none;
-                color: darkblue;
-            }
-            
-            .icons{
-                color: black;
-            }
-            
-            .logout{
-                margin: 10px;
-                float: right;
+                color: red;
+                font-size: 25px;
             }
             
             .copyright{
                 background-color:black;
+                margin-top:20px;
                 color:white;
                 text-align:center;
-                width: auto;
+                width: 100%;
                 padding: 10px;
                 bottom: 0;
+                position:fixed;
             }
     </style>
     </head>
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
         </div> 
         
-        <div class="logout">
-            <a href="home.html">
-            <img id="logoutimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
+        <div class="back">
+            <a href="../ui/studentloginform.jsp">
+            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
-       
-        <center> 
-        <div style="padding-left:70px"><h1><u>Student Column</u></h1></div>
+        
+        <center>
         <div class="content">
-            <hr><a href="studentprofile.jsp"><h2><span class="icons">☢</span> My Profile</h2></a><hr>
-            <a href="home.html"><h2><span class="icons">☢</span> Internal Guide</h2></a><hr>
-            <a href="subjectpage.jsp"><h2><span class="icons">☢</span> Take Exam</h2></a><hr>
-            <a href="home.html"><h2><span class="icons">☢</span> Project Details</h2></a><hr>
+            <div style="padding-right:70px"><h1><h1><u>Login Failed</u></h1></div>
+            <div style="padding:20px;"><h2>Please check your Hallticket No and Password</h2> 
+                <h2>If you are a new User, Please Register your Hallticket No</h2> 
+            </div>
+            <div style="padding:20px;"><h2>Please click the button below to go to Registration Page</h2>
+                <a href ="../ui/studentloginform.jsp"><img id="bakimg" src="../pics/login.png" alt="Back button" height="65" width="65"></a>
+            </div>
         </div>
         </center>
         
-    <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
+        <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
         
     </body>
 </html>

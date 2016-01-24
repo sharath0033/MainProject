@@ -1,6 +1,6 @@
 <%-- 
-    Document   : message1
-    Created on : 18 Jan, 2016, 5:18:12 PM
+    Document   : message3
+    Created on : 18 Jan, 2016, 5:18:38 PM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Redirection Page</title>
+        <title>Exam Error Page</title>
     <style>
             body{
                 width: 100%;
@@ -73,7 +73,7 @@
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
@@ -81,34 +81,27 @@
         </div> 
         
         <div class="logout">
-                    <a href="home.html">
-                    <img id="logoutimg" src="logout.png" alt="Logout button" height="55" width="55"></a>
+            <a href="../home.html">
+            <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <center>
         <div class="content">
             <%
-                String s1 = session.getAttribute("userId").toString();
+                String s1=session.getAttribute("userId").toString();
                 String s2=request.getParameter("p2");
             %>
-            <div style="padding-left:70px"><h1><u>Registration Successful</u></h1></div>
-            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
-            <div style="padding:15px;">
-                <h2>Please click the button below to continue to Exam Page</h2> 
-                <a href="subjectpage.jsp">
-                    <img id="nextimg" src="next.png" alt="Next Button" height="65" width="65">
-                </a>
+            <div style="padding-left:70px"><h1><u>Exam Error</u></h1></div>
+            <div style="padding:20px;"><h2>
+                    <span style="color:brown">
+                        <%=s1%>
+                    </span> exam error. Please click the button below to return to exam page and try again.</h2> 
+                    <a href ="../ui/exam<%=s2%>.jsp"><img id="examimg" src="../pics/catalog.png" alt="Exam Button" height="65" width="65"></a></div>
             </div>
-            <div style="padding:15px;">
-                <h2>Click the button below to go to Student Column Page</h2>
-                <a href ="catalogstudent.jsp">
-                    <img id="catlogimg" src="catalog.png" alt="Catalog button" height="65" width="65">
-                </a>
-            </div>
+            <div style="padding:20px;"><h2>If the Error persists, then kindly contact your Examiner and report the error.</h2>
+                
         </div>
         </center>
-    
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
-        
     </body>
 </html>

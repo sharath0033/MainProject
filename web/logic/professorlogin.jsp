@@ -11,11 +11,11 @@
         String pwd=request.getParameter("txt2");
         if(uid.equals("sharath")&&pwd.equals("chandra"))
         {%>
-            <jsp:forward page="catalogprofessor.jsp"/>
+            <jsp:forward page="../ui/catalogprofessor.jsp"/>
         <%}
         else
         {%>
-            <jsp:forward page="errorloginprofessor.jsp"/>
+            <jsp:forward page="../ui/errorloginprofessor.jsp"/>
         <%}
     }
     catch(Exception e){

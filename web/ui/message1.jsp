@@ -1,6 +1,6 @@
 <%-- 
-    Document   : errorlogin
-    Created on : 20 Jan, 2016, 12:54:34 AM
+    Document   : message1
+    Created on : 18 Jan, 2016, 5:18:12 PM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login Error</title>
+        <title>Redirection Page</title>
     <style>
             body{
                 width: 100%;
@@ -43,9 +43,13 @@
                 border-bottom: 3px solid white;
             }
             
-            .back{
+            .logout{
                 margin: 10px;
-                float: left;
+                float: right;
+            }
+            
+            .content{
+                padding:5px;
             }
             
             a{
@@ -62,37 +66,48 @@
                 width: 100%;
                 padding: 10px;
                 bottom: 0;
-                position:fixed;
+                position: fixed;
             }
     </style>
     </head>
     <body>
         <div class="header">
             <div class="home">
-                <a href="home.html"><img src="logo.png" alt="Home page" ></a>
+                <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
         </div> 
         
-        <div class="back">
-            <a href="studentloginform.jsp">
-            <img id="bakimg" src="backbutton.png" alt="Back button" height="55" width="55"></a>
+        <div class="logout">
+                    <a href="../home.html">
+                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <center>
         <div class="content">
-            <div style="padding-right:70px"><h1><h1><u>Login Failed</u></h1></div>
-            <div style="padding:20px;"><h2>Please check your Hallticket No and Password</h2> 
-                <h2>If you are a new User, Please Register your Hallticket No</h2> 
+            <%
+                String s1 = session.getAttribute("userId").toString();
+                String s2=request.getParameter("p2");
+            %>
+            <div style="padding-left:70px"><h1><u>Registration Successful</u></h1></div>
+            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
+            <div style="padding:15px;">
+                <h2>Please click the button below to continue to Exam Page</h2> 
+                <a href="../ui/subjectpage.jsp">
+                    <img id="nextimg" src="../pics/next.png" alt="Next Button" height="65" width="65">
+                </a>
             </div>
-            <div style="padding:20px;"><h2>Please click the button below to go to Registration Page</h2>
-                <a href ="studentloginform.jsp"><img id="bakimg" src="login.png" alt="Back button" height="65" width="65"></a>
+            <div style="padding:15px;">
+                <h2>Click the button below to go to Student Column Page</h2>
+                <a href ="../ui/catalogstudent.jsp">
+                    <img id="catlogimg" src="../pics/catalog.png" alt="Catalog button" height="65" width="65">
+                </a>
             </div>
         </div>
         </center>
-        
+    
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
         
     </body>

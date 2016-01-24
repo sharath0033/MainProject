@@ -17,13 +17,13 @@
     try{
         int str=Integer.parseInt(request.getParameter("sid"));
         if(str==1){%>
-            <jsp:forward page="exam1.jsp?subid=1"/>
+            <jsp:forward page="../ui/exam1.jsp?subid=1"/>
         <%} 
         else if(str==2){%> 
-            <jsp:forward page="exam2.jsp?subid=2"/>
+            <jsp:forward page="../ui/exam2.jsp?subid=2"/>
         <%}
         else if(str==3){%> 
-            <jsp:forward page="exam3.jsp?subid=3"/>
+            <jsp:forward page="../ui/exam3.jsp?subid=3"/>
         <%}
     }
     catch(Exception e){
