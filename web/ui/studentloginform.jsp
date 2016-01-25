@@ -123,7 +123,7 @@
                 <table border="0" cellpadding="10">
                     <tr>
                         <td style="float:right"><b>HallTicket No :</b></td>
-                        <td><input type=text name="txt1" style="width:100%"></td> 
+                        <td><input type=text name="txt1" placeholder="12Q61A05XX" style="width:100%"></td> 
                     </tr>
                     <tr>
                         <td style="float:right"><b>Password :</b></td>

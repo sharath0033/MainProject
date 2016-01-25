@@ -1,6 +1,6 @@
 <%-- 
-    Document   : message1
-    Created on : 18 Jan, 2016, 5:18:12 PM
+    Document   : guideloginmsg
+    Created on : 25 Jan, 2016, 12:26:00 PM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Redirection Page</title>
+        <title>Success Page</title>
     <style>
             body{
                 width: 100%;
@@ -41,6 +41,11 @@
             
             .update{
                 border-bottom: 3px solid white;
+            }
+            
+            .back{
+                margin: 10px;
+                float: left;
             }
             
             .logout{
@@ -78,7 +83,12 @@
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
-        </div> 
+        </div>
+        
+        <div class="back">
+            <a href="../ui/catalogprofessor.jsp">
+            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
+        </div>
         
         <div class="logout">
                     <a href="../home.html">
@@ -88,21 +98,22 @@
         <center>
         <div class="content">
             <%
-                String s1 = session.getAttribute("userId").toString();
+                String s1=request.getParameter("p1");
                 String s2=request.getParameter("p2");
+                String s3=request.getParameter("p3");
             %>
-            <div style="padding-left:70px"><h1><u>Registration Successful</u></h1></div>
-            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
+            <div><h1><u>Registration Successful</u></h1></div>
+            <h1 style="color:brown"><%=s1%> <%=s2%> <%=s3%></h1>
             <div style="padding:15px;">
-                <h2>Please click the button below to continue to Exam Page.</h2> 
-                <a href="../ui/subjectpage.jsp">
-                    <img id="nextimg" src="../pics/next.png" alt="Next Button" height="65" width="65">
+                <h2>Please click the button below to continue to Professor Column.</h2> 
+                <a href="../ui/catalogprofessor.jsp">
+                    <img id="nextimg" src="../pics/catalog.png" alt="Next Button" height="65" width="65">
                 </a>
             </div>
             <div style="padding:15px;">
-                <h2>Click the button below to go to Student Column.</h2>
-                <a href ="../ui/catalogstudent.jsp">
-                    <img id="catlogimg" src="../pics/catalog.png" alt="Catalog button" height="65" width="65">
+                <h2>Click the button below to register another Internal Guide.</h2>
+                <a href ="../ui/guideregistrationform.jsp">
+                    <img id="catlogimg" src="../pics/register.png" alt="Catalog button" height="65" width="65">
                 </a>
             </div>
         </div>

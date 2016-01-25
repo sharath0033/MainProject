@@ -84,10 +84,10 @@
         <center>
         <div class="content">
             <div style="padding-right:70px"><h1><h1><u>Login Failed</u></h1></div>
-            <div style="padding:20px;"><h2>Please check your Hallticket No and Password</h2> 
-                <h2>If you are a new User, Please Register your Hallticket No</h2> 
+            <div style="padding:20px;"><h2>Please check your Hallticket No and Password.</h2> 
+                <h2>If you are a new User, Please Register your Hallticket No in the Registration Page.</h2> 
             </div>
-            <div style="padding:20px;"><h2>Please click the button below to go to Registration Page</h2>
+            <div style="padding:20px;"><h2>Please click the button below to go to Registration Page.</h2>
                 <a href ="../ui/studentloginform.jsp"><img id="bakimg" src="../pics/login.png" alt="Back button" height="65" width="65"></a>
             </div>
         </div>

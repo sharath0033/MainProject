@@ -95,9 +95,9 @@
             <div style="padding:20px;"><h2>
                     <span style="color:brown">
                         <%=s1%>
-                    </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%></h2> 
+                    </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%>.</h2> 
             </div>
-            <div style="padding:20px;"><h2>If you have already Registered, Please return to Login Page by clicking below button</h2>
+            <div style="padding:20px;"><h2>If you have already Registered, Please return to the Login Page by clicking below button.</h2>
             <a href ="../ui/studentloginform.jsp"><img id="loginimg" src="../pics/login.png" alt="Login Button" height="65" width="65"></a></div>
                 
         </div>

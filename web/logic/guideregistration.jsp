@@ -38,8 +38,10 @@ try
                 if(st.executeUpdate(qry)>0)
                     { 
                      %>
-                     <jsp:forward page="../ui/message1.jsp">
-                         <jsp:param name="p2" value="Successfully Registered"/>
+                     <jsp:forward page="../ui/guideregistermsg.jsp">
+                         <jsp:param name="p1" value="<%=regid%>"/>
+                         <jsp:param name="p2" value="<%=regfname%>"/>
+                         <jsp:param name="p3" value="Successfully Registered"/>
                      </jsp:forward>
                    <%  
                    }
@@ -52,7 +54,7 @@ try
                   
                     if(trace.equals("com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '"+phno+"' for key 'Mobile_No_UNIQUE'")){
                        %>
-                        <jsp:forward page="../ui/error.jsp">
+                        <jsp:forward page="../ui/guideerrormsg.jsp">
                             <jsp:param name="p1" value="<%=phno%>"/>
                             <jsp:param name="p2" value="Mobile No"/>
                         </jsp:forward>
@@ -61,7 +63,7 @@ try
                   
                     if(trace.equals("com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '"+email+"' for key 'Email_ID_UNIQUE'")){
                         %>
-                        <jsp:forward page="../ui/error.jsp">
+                        <jsp:forward page="../ui/guideerrormsg.jsp">
                             <jsp:param name="p1" value="<%=email%>"/>
                             <jsp:param name="p2" value="Email ID"/>
                         </jsp:forward>

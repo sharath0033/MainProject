@@ -95,9 +95,9 @@
             <div style="padding:20px;"><h2>
                     <span style="color:brown">
                         <%=s1%>
-                    </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%></h2> 
+                    </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%>.</h2> 
             </div>
-            <div style="padding:20px;"><h2>Please return to Registration Page and try again. Please click the button below to go to Registration Page.</h2>
+            <div style="padding:20px;"><h2>To return to Registration Page and try again, Please click the button below.</h2>
             <a href ="../ui/studentregistrationform.jsp"><img id="bakimg" src="../pics/register.png" alt="Back button" height="65" width="65"></a></div>
                 
         </div>

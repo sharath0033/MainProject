@@ -94,9 +94,9 @@
             <div style="padding:20px;"><h2>
                     <span style="color:brown">
                         <%=s1%>
-                    </span> exam Successfully completed & Result generated</h2> 
+                    </span> exam Successfully completed & Result generated.</h2> 
             </div>
-            <div style="padding:20px;"><h2>Please click the below button to continue to Result Page</h2>
+            <div style="padding:20px;"><h2>Please click the below button to continue to Result Page.</h2>
             <a href ="../ui/viewresult.jsp"><img id="resultimg" src="../pics/catalog.png" alt="Result Button" height="65" width="65"></a></div>
                 
         </div>

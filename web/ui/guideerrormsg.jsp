@@ -1,6 +1,6 @@
 <%-- 
-    Document   : message1
-    Created on : 18 Jan, 2016, 5:18:12 PM
+    Document   : guideerrormsg
+    Created on : 25 Jan, 2016, 12:26:21 PM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Redirection Page</title>
+        <title>Error</title>
     <style>
             body{
                 width: 100%;
@@ -43,9 +43,9 @@
                 border-bottom: 3px solid white;
             }
             
-            .logout{
+            .back{
                 margin: 10px;
-                float: right;
+                float: left;
             }
             
             .content{
@@ -80,35 +80,29 @@
             </div>
         </div> 
         
-        <div class="logout">
-                    <a href="../home.html">
-                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
+        <div class="back">
+            <a href="../ui/guideregistrationform.jsp">
+            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <center>
         <div class="content">
             <%
-                String s1 = session.getAttribute("userId").toString();
+                String s1=request.getParameter("p1");
                 String s2=request.getParameter("p2");
             %>
-            <div style="padding-left:70px"><h1><u>Registration Successful</u></h1></div>
-            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
-            <div style="padding:15px;">
-                <h2>Please click the button below to continue to Exam Page.</h2> 
-                <a href="../ui/subjectpage.jsp">
-                    <img id="nextimg" src="../pics/next.png" alt="Next Button" height="65" width="65">
-                </a>
+            <div style="padding-right:60px"><h1><u>Registration Unsuccessful</u></h1></div>
+            <div style="padding:20px;"><h2>
+                    <span style="color:brown">
+                        <%=s1%>
+                    </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%>.</h2> 
             </div>
-            <div style="padding:15px;">
-                <h2>Click the button below to go to Student Column.</h2>
-                <a href ="../ui/catalogstudent.jsp">
-                    <img id="catlogimg" src="../pics/catalog.png" alt="Catalog button" height="65" width="65">
-                </a>
-            </div>
+            <div style="padding:20px;"><h2>To return to Registration Page and try again, Please click the button below.</h2>
+            <a href ="../ui/guideregistrationform.jsp"><img id="bakimg" src="../pics/register.png" alt="Back button" height="65" width="65"></a></div>
+                
         </div>
         </center>
-    
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
-        
     </body>
 </html>
+

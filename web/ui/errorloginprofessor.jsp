@@ -84,10 +84,10 @@
         <center>
         <div class="content">
             <div style="padding-right:70px"><h1><u>Login Failed</u></h1></div>
-            <div style="padding:20px;"><h2>Please check your Username and Password</h2> 
-                <h2>The credentials are not valid</h2> 
+            <div style="padding:20px;"><h2>Please check your Username and Password.</h2> 
+                <h2>The credentials are not valid.</h2> 
             </div>
-            <div style="padding:20px;"><h2>Please click the button below to return to Login Page and try again</h2>
+            <div style="padding:20px;"><h2>Please click the button below to return to Login Page and try again.</h2>
                 <a href ="../ui/professorloginform.jsp"><img id="bakimg" src="../pics/login.png" alt="Back button" height="65" width="65"></h4></a>
             </div>
         </div>

@@ -1,15 +1,26 @@
 <%-- 
-    Document   : message1
-    Created on : 18 Jan, 2016, 5:18:12 PM
+    Document   : guideprofile
+    Created on : 25 Jan, 2016, 10:16:55 AM
     Author     : Emin3M
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.sql.*" session="true"%>
+<%@ page language="java" import="java.io.*"%>
 <!DOCTYPE html>
 <html>
+    <%
+     try
+         {
+         Class.forName("com.mysql.jdbc.Driver");
+         Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","eminem");
+         Statement st=cn.createStatement();
+         ResultSet rs=st.executeQuery("SELECT Registration_ID * FROM register guideregister WHERE Registration_ID='CSE1'");
+         while(rs.next()){
+    %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Redirection Page</title>
+        <title>Internal Guide Profile</title>
     <style>
             body{
                 width: 100%;
@@ -43,19 +54,18 @@
                 border-bottom: 3px solid white;
             }
             
-            .logout{
+            .back{
                 margin: 10px;
-                float: right;
+                float: left;
             }
             
             .content{
-                padding:5px;
+                font-size: 22px;
             }
             
-            a{
-                text-decoration: none;
-                color: red;
-                font-size: 25px;
+            .logout{
+                margin: 10px;
+                float: right;
             }
             
             .copyright{
@@ -80,35 +90,48 @@
             </div>
         </div> 
         
-        <div class="logout">
-                    <a href="../home.html">
-                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
+        <div class="back">
+            <a href="../ui/catalogstudent.jsp">
+            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
-        <center>
+        <div class="logout">
+                    <a href="../home.html">
+                    <img id="logimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
+        </div>
+        
+        
+        <center> 
+        <div><h1><u>Internal Guide Profile</u></h1></div>
         <div class="content">
-            <%
-                String s1 = session.getAttribute("userId").toString();
-                String s2=request.getParameter("p2");
-            %>
-            <div style="padding-left:70px"><h1><u>Registration Successful</u></h1></div>
-            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
-            <div style="padding:15px;">
-                <h2>Please click the button below to continue to Exam Page.</h2> 
-                <a href="../ui/subjectpage.jsp">
-                    <img id="nextimg" src="../pics/next.png" alt="Next Button" height="65" width="65">
-                </a>
-            </div>
-            <div style="padding:15px;">
-                <h2>Click the button below to go to Student Column.</h2>
-                <a href ="../ui/catalogstudent.jsp">
-                    <img id="catlogimg" src="../pics/catalog.png" alt="Catalog button" height="65" width="65">
-                </a>
-            </div>
+            <table border="0" cellpadding="10">
+                <tr>
+                    <td><b>✎ - First Name :</b></td>
+                    <td><%=rs.getString(2)%></td>
+                </tr>
+                <tr>
+                    <td><b>✎ - Last Name :</b></td>
+                    <td><%=rs.getString(3)%></td>
+                <tr>
+                    <td><b>☏ - Phone No :</b></td>
+                    <td><%=rs.getString(4)%></td>
+                </tr>
+                <tr>
+                    <td><b>✉ - Email ID :</b></td>
+                    <td><%=rs.getString(5)%></td>
+                </tr> 
+            </table>
         </div>
         </center>
     
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
         
     </body>
+    <%
+        }  
+    }
+        catch(Exception e){
+                out.println("error is"+e);
+        }
+    %>
 </html>

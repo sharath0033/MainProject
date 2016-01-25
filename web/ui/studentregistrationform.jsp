@@ -178,7 +178,7 @@
                 <table border="0" cellpadding="10">
                     <tr>
                         <td class="left"><b>HallTicket No :</b></td>
-                        <td><input type="text" name="htno" maxlength="10"  class="right"/> </td>
+                        <td><input type="text" name="htno" maxlength="10" placeholder="12Q61A05XX" class="right"/> </td>
                     </tr>
                       
                     <tr>
