@@ -92,7 +92,7 @@
         <div style="padding-left:70px"><h1><u>Professor Column</u></h1></div>
         
         <div class="content">
-            <hr><a href="../home.html"><h2><span class="icons">📝</span> Internal Guide Registration</h2></a><hr>
+            <hr><a href="../ui/guideregistrationform.jsp"><h2><span class="icons">📝</span> Internal Guide Registration</h2></a><hr>
             <a href="../home.html"><h2><span class="icons">🛠</span> Project Allocation</h2></a><hr>
             <a href="../ui/reports.jsp"><h2><span class="icons">📚</span> Reports Column</h2></a><hr>
         </div>

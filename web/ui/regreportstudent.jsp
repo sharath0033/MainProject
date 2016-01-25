@@ -51,6 +51,7 @@
             
             .content{
                 padding:5px;
+                margin-bottom: 40px;
             }
             
             a{
@@ -71,10 +72,9 @@
                 background-color:black;
                 color:white;
                 text-align:center;
-                width: 100%;
+                width: auto;
                 padding: 10px;
                 bottom: 0;
-                position: fixed;
             }
     </style>
     </head>

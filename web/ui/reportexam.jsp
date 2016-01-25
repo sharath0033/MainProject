@@ -72,9 +72,10 @@
                 background-color:black;
                 color:white;
                 text-align:center;
-                width: auto;
+                width: 100%;
                 padding: 10px;
                 bottom: 0;
+                position: fixed;
             }
     </style>
     </head>
