@@ -65,11 +65,13 @@
             
             .copyright{
                 background-color:black;
+                margin-top:20px;
                 color:white;
                 text-align:center;
-                width: auto;
+                width: 100%;
                 padding: 10px;
                 bottom: 0;
+                position: fixed;
             }
     </style>
     </head>
@@ -95,7 +97,7 @@
         <div style="padding-left:70px"><h1><u>Student Column</u></h1></div>
         <div class="content">
             <hr><a href="../ui/studentprofile.jsp"><h2><span class="icons">☢</span> My Profile</h2></a><hr>
-            <a href="../home.html"><h2><span class="icons">☢</span> Internal Guide</h2></a><hr>
+            <a href="../ui/guideinfo.jsp"><h2><span class="icons">☢</span> Internal Guide</h2></a><hr>
     <%
         try{
             Class.forName("com.mysql.jdbc.Driver");
@@ -113,7 +115,7 @@
             out.println("error at"+e);
         }
     %>
-            <a href="../home.html"><h2><span class="icons">☢</span> Project Details</h2></a><hr>
+            <a href="../ui/projectstudentform.jsp"><h2><span class="icons">☢</span> Project Details</h2></a><hr>
         </div>
         </center>
         

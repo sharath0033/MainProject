@@ -1,6 +1,6 @@
 <%-- 
-    Document   : regreportstudentform
-    Created on : 24 Jan, 2016, 12:50:53 AM
+    Document   : reportproject
+    Created on : 26 Jan, 2016, 1:14:44 AM
     Author     : Emin3M
 --%>
 
@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Student Registration Report</title>
+        <title>Student Project Report</title>
     <style>
             body{
                 width: 100%;
@@ -101,7 +101,7 @@
         </div>
        
         <center>
-            <div><h1><u>Student's Registration Report</u></h1></div>
+            <div><h1><u>Student's Project Report</u></h1></div>
         <div class="content">
     <%
      try
@@ -109,7 +109,7 @@
          Class.forName("com.mysql.jdbc.Driver");
         Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","eminem");
          Statement st=cn.createStatement();
-         ResultSet rs=st.executeQuery("SELECT * FROM register ");
+         ResultSet rs=st.executeQuery("SELECT * FROM projectregister ");
     %> 
           <center>
           <form name="form1">
@@ -117,17 +117,16 @@
           <table border="2" cellspacing="5" cellpadding="5">
               <thead>
                   <center><tr>
-                      <th>Registration ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>DOB</th>
-                      <th>Gender</th>
-                      <th>Branch</th>
-                      <th>Year</th>
-                      <th>Mobile No</th>
-                      <th>Address</th>
-                      <th>Email ID</th>
-                      <th>Password</th>
+                      <th>Team_ID</th>
+                      <th>Internal_Guide</th>
+                      <th>Team_Leader</th>
+                      <th>Member_2</th>
+                      <th>Member_3</th>
+                      <th>Member_4</th>
+                      <th>Project_Title</th>
+                      <th>Front_End</th>
+                      <th>Back_End</th>
+                      <th>Remarks</th>
                       </tr>
               </thead>
               <tbody>
@@ -146,7 +145,6 @@
                 out.println("<td>"+rs.getString(8)+"</td>");
                 out.println("<td>"+rs.getString(9)+"</td>");
                 out.println("<td>"+rs.getString(10)+"</td>");
-                out.println("<td>"+rs.getString(11)+"</td>");
                }
             %>  
              </tbody>

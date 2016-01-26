@@ -51,7 +51,7 @@
             
             .content{
                 padding:5px;
-                margin-bottom: 40px;
+                padding-bottom: 40px;
             }
             
             a{
@@ -70,6 +70,7 @@
             
             .copyright{
                 background-color:black;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;

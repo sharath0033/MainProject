@@ -68,6 +68,7 @@
             
             .content{
                 padding:5px;
+                padding-bottom: 60px;
             }
             
             #login{

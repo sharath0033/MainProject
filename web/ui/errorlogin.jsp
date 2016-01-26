@@ -48,6 +48,11 @@
                 float: left;
             }
             
+            .content{
+                padding: 5px;
+                padding-bottom: 60px;
+            }
+            
             a{
                 text-decoration: none;
                 color: red;
@@ -62,7 +67,7 @@
                 width: 100%;
                 padding: 10px;
                 bottom: 0;
-                position:fixed;
+                position: fixed;
             }
     </style>
     </head>

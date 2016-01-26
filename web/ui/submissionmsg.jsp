@@ -1,6 +1,6 @@
 <%-- 
-    Document   : errorloginprofessor
-    Created on : 20 Jan, 2016, 1:29:01 AM
+    Document   : submissionmsg
+    Created on : 27 Jan, 2016, 1:52:24 AM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login Error</title>
+        <title>Redirection Page</title>
     <style>
             body{
                 width: 100%;
@@ -43,13 +43,13 @@
                 border-bottom: 3px solid white;
             }
             
-            .back{
+            .logout{
                 margin: 10px;
-                float: left;
+                float: right;
             }
             
             .content{
-                padding: 5px;
+                padding:5px;
                 padding-bottom: 60px;
             }
             
@@ -79,25 +79,37 @@
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
-        </div>
+        </div> 
         
-        <div class="back">
-            <a href="../ui/professorloginform.jsp">
-            <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
+        <div class="logout">
+                    <a href="../home.html">
+                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <center>
         <div class="content">
-            <div style="padding-right:70px"><h1><u>Login Failed</u></h1></div>
-            <div style="padding:20px;"><h2>Please check your Username and Password.</h2> 
-                <h2>The credentials are not valid.</h2> 
+            <%
+                String s1 =request.getParameter("p1");
+                String s2=request.getParameter("p2");
+            %>
+            <div style="padding-left:70px"><h1><u>Submission Successful</u></h1></div>
+            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
+            <div style="padding:15px;">
+                <h2>Please click the button below to continue to Project Details.</h2> 
+                <a href="../ui/projectstudentform.jsp">
+                    <img id="nextimg" src="../pics/next.png" alt="Next Button" height="65" width="65">
+                </a>
             </div>
-            <div style="padding:20px;"><h2>Please click the button below to return to Login Page and try again.</h2>
-                <a href ="../ui/professorloginform.jsp"><img id="bakimg" src="../pics/login.png" alt="Back button" height="65" width="65"></h4></a>
+            <div style="padding:15px;">
+                <h2>Click the button below to go to Student Column.</h2>
+                <a href ="../ui/catalogstudent.jsp">
+                    <img id="catlogimg" src="../pics/catalog.png" alt="Catalog button" height="65" width="65">
+                </a>
             </div>
         </div>
         </center>
-            
+    
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
+        
     </body>
 </html>

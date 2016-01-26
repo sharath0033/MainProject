@@ -81,6 +81,15 @@
                 float: left;
             }
             
+            .content{
+                padding-bottom: 60px;
+            }
+            
+            .logout{
+                margin: 10px;
+                float: right;
+            }
+            
             .left{
                 float: right;
             }
@@ -114,7 +123,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","eminem");
                 Statement st=cn.createStatement();
-                st.executeUpdate("CREATE TABLE IF NOT EXISTS project.guideregister (  Registration_ID VARCHAR(10),  First_Name VARCHAR(30),  Last_Name VARCHAR(30),  Mobile_No VARCHAR(10),  Email_ID VARCHAR(40),  PRIMARY KEY (Registration_ID),  UNIQUE INDEX Registration_ID_UNIQUE (Registration_ID ASC),  UNIQUE INDEX Email_ID_UNIQUE (Email_ID ASC),  UNIQUE INDEX Mobile_No_UNIQUE (Mobile_No ASC))");
+                st.executeUpdate("CREATE TABLE IF NOT EXISTS project.guideregister (  Guide_ID VARCHAR(10),  First_Name VARCHAR(30),  Last_Name VARCHAR(30),  Mobile_No VARCHAR(10),  Email_ID VARCHAR(40),  PRIMARY KEY (Guide_ID),  UNIQUE INDEX Guide_ID_UNIQUE (Guide_ID ASC),  UNIQUE INDEX Email_ID_UNIQUE (Email_ID ASC),  UNIQUE INDEX Mobile_No_UNIQUE (Mobile_No ASC))");
                 ResultSet rs=st.executeQuery("SELECT COUNT(*) FROM guideregister");
                 while(rs.next()){
                 int id=Integer.parseInt(rs.getString(1));
@@ -125,13 +134,18 @@
                 <a href="../home.html"><img src="../pics/logo.png" alt="Home page" ></a>
             </div>
             <div class="title">
-                <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span cass="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
+                <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>l
         </div>
         
         <div class="back">
             <a href="../ui/catalogprofessor.jsp">
             <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
+        </div>
+                
+        <div class="logout">
+            <a href="../home.html">
+            <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <div class="content">

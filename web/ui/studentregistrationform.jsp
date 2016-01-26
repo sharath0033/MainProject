@@ -116,6 +116,10 @@
                 float: left;
             }
             
+            .content{
+                padding-bottom: 60px;
+            }
+            
             .left{
                 float: right;
             }
@@ -161,7 +165,7 @@
             </div>
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span cass="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
-            </div>l
+            </div>
         </div>
         
         <div class="back">

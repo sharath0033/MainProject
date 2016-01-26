@@ -46,6 +46,7 @@
             .content{
                 font-size: 22px;
                 padding:5px;
+                padding-bottom: 60px;
             }
             
             a{
@@ -64,6 +65,7 @@
             
             .copyright{
                 background-color:black;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;
@@ -93,7 +95,7 @@
         
         <div class="content">
             <hr><a href="../ui/guideregistrationform.jsp"><h2><span class="icons">📝</span> Internal Guide Registration</h2></a><hr>
-            <a href="../home.html"><h2><span class="icons">🛠</span> Project Allocation</h2></a><hr>
+            <a href="../ui/projectallocform.jsp"><h2><span class="icons">🛠</span> Project Allocation</h2></a><hr>
             <a href="../ui/reports.jsp"><h2><span class="icons">📚</span> Reports Column</h2></a><hr>
         </div>
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>

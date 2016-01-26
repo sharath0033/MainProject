@@ -64,6 +64,7 @@
             
             .content{
                 font-size: 22px;
+                padding-bottom: 60px;
             }
             
             .logout{

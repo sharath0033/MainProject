@@ -1,6 +1,6 @@
 <%-- 
-    Document   : errorloginprofessor
-    Created on : 20 Jan, 2016, 1:29:01 AM
+    Document   : submissionerror
+    Created on : 27 Jan, 2016, 2:05:36 AM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login Error</title>
+        <title>Redirection Page</title>
     <style>
             body{
                 width: 100%;
@@ -49,7 +49,7 @@
             }
             
             .content{
-                padding: 5px;
+                padding:5px;
                 padding-bottom: 60px;
             }
             
@@ -79,25 +79,30 @@
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
-        </div>
+        </div> 
         
         <div class="back">
-            <a href="../ui/professorloginform.jsp">
+            <a href="../ui/studentregistrationform.jsp">
             <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <center>
         <div class="content">
-            <div style="padding-right:70px"><h1><u>Login Failed</u></h1></div>
-            <div style="padding:20px;"><h2>Please check your Username and Password.</h2> 
-                <h2>The credentials are not valid.</h2> 
+            <%
+                String s1=request.getParameter("p1");
+                String s2=request.getParameter("p2");
+            %>
+            <div style="padding-right:70px"><h1><u>Submission Unsuccessful</u></h1></div>
+            <div style="padding:20px;"><h2>
+                    <span style="color:brown">
+                        <%=s1%>
+                    </span> <%=s2%> already exists in Database. Please provide an Unique <%=s2%>.</h2> 
             </div>
-            <div style="padding:20px;"><h2>Please click the button below to return to Login Page and try again.</h2>
-                <a href ="../ui/professorloginform.jsp"><img id="bakimg" src="../pics/login.png" alt="Back button" height="65" width="65"></h4></a>
-            </div>
+            <div style="padding:20px;"><h2>Please return to previous page and try again by clicking below button.</h2>
+            <a href ="../ui/projectstudentform.jsp"><img id="loginimg" src="../pics/login.png" alt="Login Button" height="65" width="65"></a></div>
+                
         </div>
         </center>
-            
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
     </body>
 </html>

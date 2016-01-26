@@ -64,6 +64,7 @@
             
             .content{
                 padding:5px;
+                padding-bottom: 10px;
             }
             
             #next{

@@ -69,6 +69,7 @@
             
             .copyright{
                 background-color:black;
+                margin-top:20px;
                 color:white;
                 text-align:center;
                 width: 100%;
@@ -105,7 +106,7 @@
             <hr><a href="../ui/reportguide.jsp"><h2><span class="icons">💼</span> Internal Guide Registration Report</h2></a><hr>
             <a href="../ui/regreportstudent.jsp"><h2><span class="icons">👔</span> Student Registration Report</h2></a><hr>
             <a href="../ui/reportexam.jsp"><h2><span class="icons">📝</span> Exam Results Report</h2></a><hr>
-            <a href="../home.html"><h2><span class="icons">💻</span> Project Report</h2></a><hr>
+            <a href="../ui/reportproject.jsp"><h2><span class="icons">💻</span> Project Report</h2></a><hr>
         </div>
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
         

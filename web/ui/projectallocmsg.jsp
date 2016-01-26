@@ -1,6 +1,6 @@
 <%-- 
-    Document   : errorloginprofessor
-    Created on : 20 Jan, 2016, 1:29:01 AM
+    Document   : teamallocmsg
+    Created on : 27 Jan, 2016, 1:36:03 AM
     Author     : Emin3M
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login Error</title>
+        <title>Success Page</title>
     <style>
             body{
                 width: 100%;
@@ -48,8 +48,13 @@
                 float: left;
             }
             
+            .logout{
+                margin: 10px;
+                float: right;
+            }
+            
             .content{
-                padding: 5px;
+                padding:5px;
                 padding-bottom: 60px;
             }
             
@@ -82,22 +87,39 @@
         </div>
         
         <div class="back">
-            <a href="../ui/professorloginform.jsp">
+            <a href="../ui/catalogprofessor.jsp">
             <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
+        </div>
+        
+        <div class="logout">
+                    <a href="../home.html">
+                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
         <center>
         <div class="content">
-            <div style="padding-right:70px"><h1><u>Login Failed</u></h1></div>
-            <div style="padding:20px;"><h2>Please check your Username and Password.</h2> 
-                <h2>The credentials are not valid.</h2> 
+            <%
+                String s1=request.getParameter("p1");
+                String s2=request.getParameter("p2");
+            %>
+            <div><h1><u>Allocation Successful</u></h1></div>
+            <h1 style="color:brown"><%=s1%> <%=s2%></h1>
+            <div style="padding:15px;">
+                <h2>Please click the button below to continue to Professor Column.</h2> 
+                <a href="../ui/catalogprofessor.jsp">
+                    <img id="nextimg" src="../pics/catalog.png" alt="Next Button" height="65" width="65">
+                </a>
             </div>
-            <div style="padding:20px;"><h2>Please click the button below to return to Login Page and try again.</h2>
-                <a href ="../ui/professorloginform.jsp"><img id="bakimg" src="../pics/login.png" alt="Back button" height="65" width="65"></h4></a>
+            <div style="padding:15px;">
+                <h2>Click the button below to allocate another Team.</h2>
+                <a href ="../ui/projectallocform.jsp">
+                    <img id="catlogimg" src="../pics/register.png" alt="Catalog button" height="65" width="65">
+                </a>
             </div>
         </div>
         </center>
-            
+    
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
+        
     </body>
 </html>

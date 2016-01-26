@@ -1,15 +1,35 @@
 <%-- 
-    Document   : guideloginmsg
-    Created on : 25 Jan, 2016, 12:26:00 PM
+    Document   : guideinfo
+    Created on : 27 Jan, 2016, 1:08:25 AM
     Author     : Emin3M
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.sql.*" session="true"%>
+<%@ page language="java" import="java.io.*"%>
 <!DOCTYPE html>
+    <%
+        String uid = session.getAttribute("userId").toString();
+    %>
 <html>
+    <%
+     try
+         {
+         Class.forName("com.mysql.jdbc.Driver");
+         Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","eminem");
+         Statement st=cn.createStatement();
+         Statement st1=cn.createStatement();
+         ResultSet rs=st.executeQuery("SELECT Internal_Guide FROM projectregister WHERE Team_Leader='"+uid+"' OR Member_2='"+uid+"' OR Member_3='"+uid+"' OR Member_4='"+uid+"'");
+         String qry[]=new String[5];
+         while(rs.next()){
+            qry[0]=rs.getString(1);
+         }
+         ResultSet rs1=st1.executeQuery("SELECT * FROM guideregister WHERE Guide_ID='"+qry[0]+"'");
+         while(rs1.next()){
+    %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Success Page</title>
+        <title>My Profile</title>
     <style>
             body{
                 width: 100%;
@@ -48,20 +68,14 @@
                 float: left;
             }
             
-            .logout{
-                margin: 10px;
-                float: right;
-            }
-            
             .content{
-                padding:5px;
+                font-size: 22px;
                 padding-bottom: 60px;
             }
             
-            a{
-                text-decoration: none;
-                color: red;
-                font-size: 25px;
+            .logout{
+                margin: 10px;
+                float: right;
             }
             
             .copyright{
@@ -84,43 +98,55 @@
             <div class="title">
                 <h1><span class="update" style="font-size:140%;">STUDENT  PROJECT  ALLOCATION</span><span class="update" style="font-size:70%;"> & MANAGEMENT</span></h1>
             </div>
-        </div>
+        </div> 
         
         <div class="back">
-            <a href="../ui/catalogprofessor.jsp">
+            <a href="../ui/catalogstudent.jsp">
             <img id="bakimg" src="../pics/backbutton.png" alt="Back button" height="55" width="55"></a>
         </div>
         
         <div class="logout">
                     <a href="../home.html">
-                    <img id="logoutimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
+                    <img id="logimg" src="../pics/logout.png" alt="Logout button" height="55" width="55"></a>
         </div>
         
-        <center>
+        
+        <center> 
+        <div><h1><u>My Profile</u></h1></div>
         <div class="content">
-            <%
-                String s1=request.getParameter("p1");
-                String s2=request.getParameter("p2");
-                String s3=request.getParameter("p3");
-            %>
-            <div><h1><u>Registration Successful</u></h1></div>
-            <h1 style="color:brown"><%=s1%> <%=s2%> <%=s3%></h1>
-            <div style="padding:15px;">
-                <h2>Please click the button below to continue to Professor Column.</h2> 
-                <a href="../ui/catalogprofessor.jsp">
-                    <img id="nextimg" src="../pics/catalog.png" alt="Next Button" height="65" width="65">
-                </a>
-            </div>
-            <div style="padding:15px;">
-                <h2>Click the button below to register another Internal Guide.</h2>
-                <a href ="../ui/guideregistrationform.jsp">
-                    <img id="catlogimg" src="../pics/register.png" alt="Catalog button" height="65" width="65">
-                </a>
-            </div>
+            <table border="0" cellpadding="10">
+                <tr>
+                    <td><b>🎓 - Guide ID :</b></td>
+                    <td><%=rs1.getString(1)%></td>
+                </tr>
+                <tr>
+                    <td><b>✎ - First Name :</b></td>
+                    <td><%=rs1.getString(2)%></td>
+                </tr>
+                <tr>
+                    <td><b>✎ - Last Name :</b></td>
+                    <td><%=rs1.getString(3)%></td>
+                </tr>
+                <tr>
+                    <td><b>☏ - Phone No :</b></td>
+                    <td><%=rs1.getString(4)%></td>
+                </tr>
+                <tr>
+                    <td><b>✉ - Email ID :</b></td>
+                    <td><%=rs1.getString(5)%></td>
+                </tr> 
+            </table>
         </div>
         </center>
     
         <div class="copyright">Copyright © 2016 by Avanthi Inst of Engg & Tech. All Rights Reserved.</div>
         
     </body>
+    <%
+        }  
+    }
+        catch(Exception e){
+                out.println("error is"+e);
+        }
+    %>
 </html>
